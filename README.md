@@ -105,6 +105,8 @@ AI crop disease detection
 
 📷-screenshort
 ![Homepage](https://github.com/Code-by-Jay/Agri-sena-updates/blob/main/homepage.png%20(2).png?raw=true)
+Dashboard 📊
+![Dashboard](https://github.com/Code-by-Jay/Agri-sena-updates/blob/main/homepage.png.png?raw=true)
 
 
 🧑‍💻 Author
