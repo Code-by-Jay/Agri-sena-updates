@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Agrisen.css">
+    <script src="script.js"></script>
+    <title>www.agrisena.com</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="agr-sena-high-resolution-logo-removebg-preview.png" width="160px" height="140px">
+            <div class="right">
+                <ul>
+                    <li><a href="#weather">Weather</a></li>
+                    <li><a href="https://enam.gov.in/web/dashboard/live_price">Market Prices</a></li>
+                    <li><a href="https://sachet.ndma.gov.in/">Disaster Alerts</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-banner">
+        <div class="hero-text">
+            <h1>Your Digital Farming Companion</h1>
+            <p>Welcome to <strong>Agrisena</strong> — where innovation meets agriculture.</p>
+        </div>
+        <video width="470px" height="300px" autoplay loop muted>
+            <source src="videoplayback.webm" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Sign In Form -->
+    <section class="form-container" id="signin-form">
+        <h2>Sign In</h2>
+        <form action="#" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required placeholder="Enter username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Enter password">
+
+            <button type="submit">Sign In</button>
+        </form>
+        <div class="toggle-btn">
+            <a href="javascript:void(0);" onclick="toggleForms()">Don't have an account? Register here</a>
+        </div>
+    </section>
+
+    <!-- Dashboard Section (hidden by default) -->
+    <section class="dashboard" id="farmer-dashboard" style="display: none;">
+        <h2>Welcome, <span id="userNameDisplay">Farmer</span> 👨‍🌾</h2>
+        <div class="dashboard-grid">
+            <div class="card weather-card">
+                <h3>🌦️ Today's Weather</h3>
+                <p id="dashboard-weather">Loading weather...</p>
+            </div>
+
+            <div class="card market-card">
+                <h3>💹 Market Price</h3>
+                <p>Select a crop:</p>
+                <select id="cropSelect">
+                    <option value="wheat">Wheat</option>
+                    <option value="rice">Rice</option>
+                    <option value="cotton">Cotton</option>
+                </select>
+                <div id="marketPriceDisplay">--</div>
+            </div>
+
+            <div class="card alert-card">
+                <h3>⚠️ Alerts & Notifications</h3>
+                <ul id="alertsList">
+                    <li>Loading alerts...</li>
+                </ul>
+            </div>
+
+            <div class="card soil-card">
+                <h3>🌱 Soil & Crop Tips</h3>
+                <p id="soilTips">Fetching tips...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Form -->
+    <div class="form-container register-form" id="register-form">
+        <h2>Register</h2>
+        <form action="#" method="POST">
+            <label for="new-username">Username</label>
+            <input type="text" id="new-username" name="username" required placeholder="Enter username">
+
+            <label for="new-email">Email</label>
+            <input type="email" id="new-email" name="email" required placeholder="Enter email">
+
+            <label for="new-password">Password</label>
+            <input type="password" id="new-password" name="password" required placeholder="Enter password">
+
+            <button type="submit">Register</button>
+        </form>
+        <div class="toggle-btn">
+            <a href="javascript:void(0);" onclick="toggleForms()">Already have an account? Sign In here</a>
+        </div>
+    </div>
+
+    <!-- Weather Section -->
+    <section id="weather">
+        <h2>🌤️ Weather Forecast</h2>
+        <div class="weather-inputs">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button onclick="getWeatherByCity()">Get Forecast</button>
+        </div>
+
+        <div id="weatherTabs" class="weather-tabs">
+            <button class="tab-btn active" onclick="showTab('today')">Today</button>
+            <button class="tab-btn" onclick="showTab('week')">7-Day Forecast</button>
+        </div>
+
+        <div id="loading" class="loading">Loading...</div>
+
+        <div id="weatherResult">
+            <div id="todayForecast" class="tab-content"></div>
+            <div id="weekForecast" class="tab-content" style="display: none;"></div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-us">
+        <div class="about-container">
+            <h2>ABOUT AGRISENA</h2>
+            <p>
+                Welcome to <strong>Agrisena</strong>, your trusted companion in agriculture. Our mission is to empower farmers with essential information, innovative tools, and timely updates to help them make informed decisions and thrive in their agricultural endeavors.
+            </p>
+            <p>
+                Agrisena provides a wide range of services tailored to the needs of farmers, including:
+            </p>
+            <ul>
+                <li><strong>Weather Warnings:</strong> Stay ahead of unpredictable weather patterns with real-time alerts for storms, cyclones, and floods.</li>
+                <li><strong>Market Prices:</strong> Access up-to-date crop prices to maximize your profits and make better market decisions.</li>
+                <li><strong>Disaster Alerts:</strong> Receive early warnings for natural disasters to safeguard your crops, livestock, and livelihood.</li>
+                <li><strong>Agricultural Guidance:</strong> Learn best practices, crop tips, and modern farming techniques to improve yields and efficiency.</li>
+                <li><strong>7-Days weather forecast:</strong> Access the current location of device /manually selected your city it gives 7 days forecast output</li>
+            </ul>
+            <p>
+                At Agrisena, we are committed to building a sustainable and prosperous future for our farmers. With technology and innovation at the heart of our platform, we strive to address the challenges faced by the agricultural community.
+            </p>
+            <p>
+                Join us on this journey and take a step toward revolutionizing the way you approach farming. Together, we can cultivate success!
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Agrisena. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#signin-form">Sign In</a></li>
+                <li><a href="https://enam.gov.in/web/dashboard/live_price">Market Prices</a></li>
+                <li><a href="https://sachet.ndma.gov.in/">Disaster Alerts</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
