@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Agrisen.css">
+    <script src="script.js"></script>
+    <title>www.agrisena.com</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="agr-sena-high-resolution-logo-removebg-preview.png" , width="160px" , height="140px">
+             <div class="right">
+                <ul>
+                    <li><a href="#weather">Weather</a></li>
+                    <li><a href="https://enam.gov.in/web/dashboard/live_price">Market Prices</a></li>
+                    <li><a href="https://sachet.ndma.gov.in/">Disaster Alerts</a></li>
+                    <li><a href="#about-agrisena">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<section class="hero-banner">
+  <div class="hero-text">
+    <h1>Your Digital Farming Companion</h1>
+    <p>Welcome to <strong>Agrisena</strong> — where innovation meets agriculture.</p>
+  </div>
+  <video width="470px" height="300px" autoplay loop muted>
+        <source src="videoplayback.webm" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <section class="form-container" id="signin-form">
+            <h2>Sign In</h2>
+            <form action="http://localhost:3000/signin" method="POST">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Enter username">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter password">
+
+                <button type="submit">Sign In</button>
+            </form>
+            <div class="toggle-btn">
+                <a href="javascript:void(0);" onclick="toggleForms()">Don't have an account? Register here</a>
+            </div>
+        </section>
+
+    <section id="weather">
+  <h2>🌤️ Weather Forecast</h2>
+  <div class="weather-inputs">
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <button onclick="getWeatherByCity()">Get Forecast</button>
+  </div>
+
+  <div id="weatherTabs" class="weather-tabs">
+    <button class="tab-btn active" onclick="showTab('today')">Today</button>
+    <button class="tab-btn" onclick="showTab('week')">7-Day Forecast</button>
+  </div>
+
+  <div id="loading" class="loading">Loading...</div>
+
+  <div id="weatherResult">
+    <div id="todayForecast" class="tab-content"></div>
+    <div id="weekForecast" class="tab-content" style="display: none;"></div>
+  </div>
+</section>
+
+    </section>
+
+
+        <!-- Register Form -->
+        <div class="form-container register-form" id="register-form">
+            <h2>Register</h2>
+            <form id="loginform">
+                <label for="new-username">Username</label>
+                <input type="text" id="new-username" name="username" required placeholder="Enter username">
+
+                <label for="new-email">Email</label>
+                <input type="email" id="new-email" name="email" required placeholder="Enter email">
+
+                <label for="new-password">Password</label>
+                <input type="password" id="new-password" name="password" required placeholder="Enter password">
+
+                <button type="submit">Register</button>
+            </form>
+            <div class="toggle-btn">
+                <a href="javascript:void(0);" onclick="toggleForms()">Already have an account? Sign In here</a>
+            </div>
+        </div>
+    </section>
+          
+    </section>
+    <br>
+    <br>
+    <br>
+   <section id="about-agrisena" class="about-section">
+  <div class="container">
+    <h2>🌱 About <span class="highlight">Agrisena</span></h2>
+    <p class="intro">
+      Your trusted companion in modern farming. <strong>Agrisena</strong> combines real-time data, AI insights, and farmer-centric tools to revolutionize agriculture.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>🌦️ Weather Warnings</h3>
+        <p>Get instant alerts for storms, cyclones, and extreme weather based on your location.</p>
+      </div>
+      <div class="feature-card">
+        <h3>📊 Market Prices</h3>
+        <p>Live updates on mandi rates to help you sell smart and earn more.</p>
+      </div>
+      <div class="feature-card">
+        <h3>⚠️ Disaster Alerts</h3>
+        <p>Early warnings for floods, droughts, and locust attacks to safeguard your crops.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🧠 Farming Tips</h3>
+        <p>AI-driven suggestions for improving soil health, crop yield, and water usage.</p>
+      </div>
+      <div class="feature-card">
+        <h3>📅 7-Day Forecast</h3>
+        <p>Auto-location or manual city selection for upcoming weather trends.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🌾 Smart Crop Advice</h3>
+        <p>Seasonal crop recommendations based on local conditions and rainfall patterns.</p>
+      </div>
+    </div>
+
+    <p class="closing">
+      We believe technology can empower every farmer. Join <strong>Agrisena</strong> to build a smarter, more resilient agricultural future.
+    </p>
+  </div>
+</section>
+
+
+</body>
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Agrisena. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#about-agrisena">About Us</a></li>
+                <li><a href="#signin-form">Sign In</a></li>
+                <li><a href="https://enam.gov.in/web/dashboard/live_price">Market Prices</a></li>
+                <li><a href="https://sachet.ndma.gov.in/">Disaster Alerts</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+
+</html>

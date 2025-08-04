@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agrisena Dashboard</title>
+    <script src="script.js"></script>
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>🌾 Agrisena Dashboard</h1>
+    <p id="welcome-msg">Welcome, Farmer!</p>
+    <a href="/" class="logout-btn">Logout</a>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="card">
+      <h2>📈 Market Prices</h2>
+      <p>Live crop pricing from eNAM.</p>
+      <a href="https://enam.gov.in/web/dashboard/live_price" target="_blank">Check Prices</a>
+    </section>
+
+    <section class="card">
+      <h2>🚨 Disaster Alerts</h2>
+      <p>Receive real-time alerts for your region.</p>
+      <a href="https://sachet.ndma.gov.in/" target="_blank">Check Alerts</a>
+    </section>
+   <section class="card crop-recommendation">
+  <h2>🌿 Crop Recommendation System</h2>
+
+  <label for="soilType">Select Soil Type:</label>
+  <select id="soilType">
+    <option value="black">Black Soil</option>
+    <option value="red">Red Soil</option>
+    <option value="alluvial">Alluvial Soil</option>
+    <option value="laterite">Laterite Soil</option>
+  </select>
+
+  <label for="season">Select Season:</label>
+  <select id="season">
+    <option value="summer">Summer</option>
+    <option value="kharif">Kharif</option>
+    <option value="rabi">Rabi</option>
+  </select>
+
+  <button onclick="recommendCrops()">Recommend Crops</button>
+
+  <div id="recommendationResult" style="margin-top: 15px;"></div>
+</section>
+
+</section>
+    </section>
+     <section class="news-section">
+  <h2>📰 Daily Agriculture News</h2>
+  <div class="news-cards">
+    <article class="news-card">
+      <h3>IMD Predicts Above-Normal Rainfall in August</h3>
+      <p>The Indian Meteorological Department forecasts favorable monsoon patterns — boosting crop expectations this season.</p>
+      <a href="https://mausam.imd.gov.in/" target="_blank">Read more</a>
+    </article>
+
+    <article class="news-card">
+      <h3>Government Increases MSP for Kharif Crops</h3>
+      <p>Minimum Support Prices revised to ensure farmers get fair value for rice, cotton, and pulses.</p>
+      <a href="https://www.india.gov.in/farmers-portal" target="_blank">View Policy</a>
+    </article>
+
+    <article class="news-card">
+      <h3>Agritech Startups Gain Momentum</h3>
+      <p>Investors pour funds into startups revolutionizing supply chains, storage, and smart irrigation.</p>
+      <a href="https://yourstory.com/tag/agritech" target="_blank">Explore More</a>
+    </article>
+    
+  </div>
+</section>
+
+
+    <style>
+      body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.dashboard-header {
+  background-color: #2e7d32;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.logout-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: #c62828;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.dashboard-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: rgb(232, 253, 217);
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 6px solid #388e3c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #2e7d32;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1b5e20;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dashboard-footer {
+  text-align: center;
+  padding: 20px;
+  background: #2e7d32;
+  color: white;
+}
+.news-section {
+  padding: 40px;
+  background-color: #e8f5e9;
+}
+
+.news-section h2 {
+  text-align: center;
+  color: #1b5e20;
+  margin-bottom: 30px;
+}
+
+.news-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.news-card {
+  background: white;
+  border-left: 6px solid #388e3c;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.news-card h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #2e7d32;
+}
+
+.news-card p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.news-card a {
+  text-decoration: none;
+  color: #2e7d32;
+  font-weight: bold;
+}
+.crop-recommendation {
+  padding: 20px;
+  background: #f6ffed;
+  border-left: 5px solid #4caf50;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.crop-recommendation select,
+.crop-recommendation button {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+}
+
+    </style>
+  </main>
+
+  <footer class="dashboard-footer">
+    <p>&copy; 2024 Agrisena. All rights reserved.</p>
+  </footer>
+  <script>
+    
+  window.onload = function () {
+    const username = localStorage.getItem('username');
+    if (!username) {
+      window.location.href ='agrisena.html'; // Redirect if not logged in
+    } else {
+      document.getElementById('welcome-msg').textContent = `👋 Welcome, ${username}!`;
+    }
+  };
+<a href="#" class="logout-btn" onclick="logout()">Logout</a>
+  function logout() {
+    localStorage.removeItem('username');
+    window.location.href = 'index.html';
+  }
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+ /* Style the header and navigation */
+nav {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 85px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(244, 237, 237);
+    background: linear-gradient(140deg, #ddae48 20%, #d4eb53 100%);
+    
+    
+}
+nav ul {
+display: flex;
+justify-content: center;
+}
+nav ul li {
+    list-style:none;
+    margin: 0 24px;
+    font-size: 1.4rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: #333;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(241, 246, 246);
+}
+nav ul li a:hover{
+    color: rgb(18, 18, 18);
+    
+    
+}
+.hero-text {
+  max-width: 600px;
+  margin-left:2%;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  font-style: oblique;
+ font-family:sans-serif;
+  margin-bottom: 20px;
+  color:red;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 1.4rem;
+  color: #0c0c0c;
+  line-height: 1.6;
+}
+video{
+    margin-left: 1%;
+    margin-top:0%;
+    border-radius: 19%;
+    
+    
+}
+/* Container for both Sign In and Register forms */
+.form-container {
+    width: 300px;
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 20px;
+    background-color:wheat;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: -25%;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #141313;
+    border-radius: 4px;
+}
+
+.form-container button {
+    padding: 10px;
+    background-color: #21de18;
+    color:white;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+
+
+/* Hide the Register form by default */
+.register-form {
+    display: none;
+}
+
+/* Link to toggle between forms */
+.toggle-btn {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.toggle-btn a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+body{
+    font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(photo.avif);
+            
+}
+.about-section {
+  background: linear-gradient(to right, #f4f9f4, #e8f5e9);
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.about-section .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2e7d32;
+}
+
+.about-section .highlight {
+  color: #43a047;
+  font-weight: bold;
+}
+
+.about-section .intro,
+.about-section .closing {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 20px;
+  border-left: 6px solid #66bb6a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(34, 139, 34, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(34, 139, 34, 0.2);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  color: #2e7d32;
+  font-size: 1.2rem;
+}
+
+.feature-card p {
+  margin: 10px 0 0;
+  color: #555;
+}
+
+.footer {
+    background-color: #2c3e50; /* Dark background for contrast */
+    color: #ecf0f1; /* Light text for readability */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #ecf0f1; /* Match text color */
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #1abc9c; /* Highlight color on hover */
+}
+h2{
+    text-align: center;
+}
+/* Weather Section Styling */
+#weather {
+  background-color:transparent;
+  padding:2px;
+ /* max-width:1600px;*/
+ width:100%;
+  margin:0px;
+ /* box-shadow:20px rgba(16, 16, 16, 0.5);*/
+  text-align: center;
+  margin-top:-7%;
+
+}
+
+#weather h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* better contrast on light background */
+  
+}
+
+.weather-inputs input::placeholder {
+  color: #0b0b0b;
+}
+
+.weather-inputs button,
+.tab-btn {
+  color: white;
+}
+
+
+
+#cityInput {
+  padding: 10px 15px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 10px;
+  background-color: #f7f6f6;
+  color: #191818;
+}
+
+#weather button {
+  padding: 10px 20px;
+  background-color: #e50914;
+  color: #f6f3f3;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition:background 0.3s ease;
+}
+
+#weather button:hover {
+  background-color: #ff2e2e;
+}
+
+#weatherResult {
+  margin-top: 30px;
+  color: #ffffff;
+  font-size: medium;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* better contrast on light background */
+
+}
+
+
+.forecast-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.forecast-day {
+  background-color: #403d3d;
+  padding: 15px;
+  border-radius: 12px;
+  width: 160px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.forecast-day h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.forecast-day img {
+  width: 50px;
+  height: 50px;
+}
+
+.forecast-day p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+.weather-inputs {
+  margin-bottom: 20px;
+}
+
+#loading {
+  display: none;
+  color: #101010;
+  margin-top: 20px;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.weather-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tab-btn {
+  padding: 8px 16px;
+  background-color: #3c3b3b;
+  color: #fcf9f9;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background-color: #e50914;
+}
+
+.tab-content {
+  margin-top: 20px;
+  
+}
