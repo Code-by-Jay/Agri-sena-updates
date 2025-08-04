@@ -102,13 +102,7 @@ Multilingual support
 Responsive mobile UI
 
 AI crop disease detection
-## 📸 Screenshots
 
-### 🏠 Homepage
-Homepage(homepage.png (2).png)
-
-### 📊 Dashboard
-!Dashboard(homepage.png (2).png)
 
 
 
