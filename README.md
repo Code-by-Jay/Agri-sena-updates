@@ -105,10 +105,10 @@ AI crop disease detection
 ## 📸 Screenshots
 
 ### 🏠 Homepage
-Homepage(./assets/homepage.png)
+Homepage(homepage.png (2).png)
 
 ### 📊 Dashboard
-![Dashboard](./assets/dashboard.png)
+!Dashboard(homepage.png (2).png)
 
 
 
