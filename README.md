@@ -103,7 +103,8 @@ Responsive mobile UI
 
 AI crop disease detection
 
-
+📷-screenshort
+![Homepage](https://github.com/Code-by-Jay/Agri-sena-updates/blob/main/homepage.png%20(2).png?raw=true)
 
 
 🧑‍💻 Author
